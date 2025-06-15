@@ -1,0 +1,89 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="SaveGameMenu.uss" />
+    
+    <!-- Основной контейнер с фоном -->
+    <ui:VisualElement name="SaveGameMenu" class="save-game-menu">
+        
+        <!-- Фоновые элементы для создания глубины -->
+        <ui:VisualElement name="background-layer" class="background-layer">
+            <ui:VisualElement name="bg-circle-1" class="bg-circle bg-circle-1" />
+            <ui:VisualElement name="bg-circle-2" class="bg-circle bg-circle-2" />
+            <ui:VisualElement name="bg-circle-3" class="bg-circle bg-circle-3" />
+            <ui:VisualElement name="bg-circle-4" class="bg-circle bg-circle-4" />
+        </ui:VisualElement>
+        
+        <!-- Центральный контент -->
+        <ui:VisualElement name="content-container" class="content-container">
+            
+            <!-- Заголовок -->
+            <ui:VisualElement name="header-section" class="header-section">
+                <ui:Label text="СОХРАНЕНИЯ" name="SaveMenuTitle" class="save-menu-title" />
+                <ui:Label text="Управляйте своими сохранениями" name="subtitle" class="subtitle" />
+            </ui:VisualElement>
+            
+            <!-- Основной контейнер контента -->
+            <ui:VisualElement name="SaveMenuContent" class="save-menu-content">
+                
+                <!-- Список сохранений -->
+                <ui:VisualElement name="SavesListContainer" class="saves-list-container">
+                    <ui:Label text="Доступные сохранения" class="section-label" />
+                    <ui:ScrollView name="SavesList" class="saves-list">
+                        <!-- Сохранения будут добавляться динамически -->
+                    </ui:ScrollView>
+                </ui:VisualElement>
+                
+                <!-- Панель управления -->
+                <ui:VisualElement name="ControlPanel" class="control-panel">
+                    
+                    <!-- Информация о выбранном сохранении -->
+                    <ui:VisualElement name="SaveInfo" class="save-info">
+                        <ui:Label text="Информация о сохранении" name="SaveInfoTitle" class="save-info-title" />
+                        <ui:VisualElement name="SaveInfoContent" class="save-info-content">
+                            <ui:VisualElement name="SaveScreenshotContainer" class="save-screenshot-container">
+                                <ui:VisualElement name="SaveScreenshot" class="save-screenshot" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="SaveInfoDetails" class="save-info-details">
+                                <ui:Label text="Выберите сохранение для просмотра деталей" name="SaveInfoDate" class="save-info-detail" />
+                                <ui:Label text="" name="SaveInfoPlayTime" class="save-info-detail" />
+                                <ui:Label text="" name="SaveInfoMoney" class="save-info-detail" />
+                                <ui:Label text="" name="SaveInfoDay" class="save-info-detail" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    
+                    <!-- Кнопки действий -->
+                    <ui:VisualElement name="ActionButtons" class="action-buttons">
+                        <ui:Button text="ЗАГРУЗИТЬ" name="LoadButton" class="action-button primary-button" />
+                        <ui:Button text="СОХРАНИТЬ" name="SaveButton" class="action-button secondary-button" style="display: none;" />
+                        <ui:Button text="УДАЛИТЬ" name="DeleteButton" class="action-button danger-button" />
+                        <ui:Button text="НАЗАД" name="BackButton" class="action-button back-button" />
+                    </ui:VisualElement>
+                    
+
+                    
+                </ui:VisualElement>
+            </ui:VisualElement>
+            
+        </ui:VisualElement>
+        
+        <!-- Модальное окно для нового сохранения -->
+        <ui:VisualElement name="NewSavePanel" class="modal-overlay" style="display: none;">
+            <ui:VisualElement name="modal-backdrop" class="modal-backdrop" />
+            <ui:VisualElement name="modal-container" class="modal-container">
+                <ui:VisualElement name="modal-header" class="modal-header">
+                    <ui:Label text="НОВОЕ СОХРАНЕНИЕ" class="modal-title" />
+                    <ui:Button name="CloseModalButton" class="modal-close-button" text="✕" />
+                </ui:VisualElement>
+                <ui:VisualElement name="modal-content" class="modal-content">
+                    <ui:Label text="Введите название для вашего сохранения" class="modal-description" />
+                    <ui:TextField name="SaveNameInput" class="modal-input" />
+                </ui:VisualElement>
+                <ui:VisualElement name="modal-footer" class="modal-footer">
+                    <ui:Button text="ОТМЕНА" name="CancelSaveButton" class="modal-button secondary-button" />
+                    <ui:Button text="СОХРАНИТЬ" name="ConfirmSaveButton" class="modal-button primary-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        
+    </ui:VisualElement>
+</ui:UXML> 

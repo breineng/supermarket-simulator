@@ -1,0 +1,19 @@
+/* GameHUD specific styles */
+
+/* Прицел - белая точка с черной обводкой */
+.crosshair {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    border-width: 1px;
+    border-color: black;
+    left: 50%;
+    top: 50%;
+    margin-left: -3px;
+    margin-top: -3px;
+    pick-mode: ignore;
+    /* Добавляем легкую тень для лучшей видимости */
+    -unity-background-image-tint-color: white;
+} 

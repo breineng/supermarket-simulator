@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" engine="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/CashDeskUI/CashDeskScreen.uss?fileID=7433441132597879392&amp;guid=2c379c34e4a1a4840920954113bf9d44&amp;type=3#CashDeskScreen" />
+    <ui:VisualElement name="CashDeskScreenContainer" style="flex-grow: 1; background-color: rgb(20, 25, 30); border-color: rgb(100, 110, 120); border-width: 2px; border-radius: 10px; padding: 10px; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+        <ui:Label text="CASH REGISTER" display-style="Flex" style="font-size: 24px; -unity-font-style: bold; color: rgb(220, 220, 220); -unity-text-align: upper-left; margin-bottom: 10px;" />
+        <ui:ScrollView name="ScannedItemsScrollView" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" style="flex-grow: 1; margin-bottom: 10px;" />
+        <ui:VisualElement name="Divider" style="height: 2px; background-color: rgb(100, 110, 120); margin-top: 5px; margin-bottom: 5px;" />
+        <ui:VisualElement name="TotalContainer" style="flex-direction: row; justify-content: space-between; margin-top: 5px; margin-bottom: 10px;">
+            <ui:Label text="TOTAL" style="font-size: 20px; -unity-font-style: bold; color: rgb(200, 200, 200);" />
+            <ui:Label name="TotalAmountLabel" text="$0.00" style="font-size: 20px; -unity-font-style: bold; color: rgb(120, 220, 120);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,140 @@
+/* Assets/UI/ComputerUI/ComputerScreen.uss */
+
+/* Основные стили для кнопок */
+.tab-button {
+    height: 40px;
+    margin-right: 5px;
+    padding: 0 20px;
+    background-color: rgb(45, 60, 75);
+    color: rgb(200, 200, 200);
+    border-width: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    transition-duration: 0.2s;
+}
+
+.tab-button:hover {
+    background-color: rgb(55, 75, 95);
+    color: white;
+}
+
+.tab-button.active-tab {
+    background-color: rgb(15, 52, 96);
+    color: white;
+}
+
+/* Стили для подвкладок магазина */
+.sub-tab-button {
+    height: 35px;
+    margin-right: 10px;
+    padding: 0 15px;
+    background-color: rgb(35, 50, 65);
+    color: rgb(180, 180, 180);
+    border-width: 0;
+    border-radius: 3px;
+    font-size: 13px;
+    transition-duration: 0.2s;
+}
+
+.sub-tab-button:hover {
+    background-color: rgb(45, 65, 85);
+    color: white;
+}
+
+.sub-tab-button.active-sub-tab {
+    background-color: rgb(76, 175, 80);
+    color: white;
+}
+
+/* Стили для карточек товаров */
+.product-card {
+    margin: 10px;
+    background-color: rgb(25, 40, 55);
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgb(40, 55, 70);
+    overflow: hidden;
+}
+
+.product-card:hover {
+    border-color: rgb(15, 52, 96);
+}
+
+/* Стили для управления ценами */
+.product-price-item {
+    background-color: rgb(25, 40, 55);
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(40, 55, 70);
+    margin-bottom: 8px;
+    padding: 12px 15px;
+    transition-duration: 0.2s;
+}
+
+.product-price-item:hover {
+    background-color: rgb(30, 45, 60);
+    border-color: rgb(50, 65, 80);
+}
+
+.apply-price-button {
+    background-color: rgb(76, 175, 80);
+    color: white;
+    border-width: 0;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 8px 16px;
+    transition-duration: 0.2s;
+}
+
+.apply-price-button:hover {
+    background-color: rgb(90, 195, 95);
+}
+
+.apply-price-button:active {
+    background-color: rgb(60, 155, 65);
+}
+
+/* Стили для элементов списка заказа (если потребуется специфичное) */
+.product-order-item {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 5px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(40, 55, 70);
+}
+
+.product-order-item Label {
+    color: rgb(200,200,200);
+    font-size: 12px;
+}
+
+.product-order-item IntegerField {
+    width: 60px; /* Фиксированная ширина для поля ввода количества */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Стили для TextField */
+TextField {
+    background-color: rgb(40, 40, 40);
+    border-color: rgb(60, 60, 60);
+    border-width: 1px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+}
+
+TextField:focus {
+    border-color: rgb(76, 175, 80);
+    border-width: 2px;
+}
+
+TextField > #unity-text-input {
+    background-color: transparent;
+    border-width: 0;
+    color: rgb(255, 255, 255);
+}
+
+TextField > Label {
+    color: rgb(180, 180, 180);
+} 

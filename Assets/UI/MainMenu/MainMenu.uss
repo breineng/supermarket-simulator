@@ -1,0 +1,212 @@
+.main-container {
+    flex-grow: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 20);
+    background-image: linear-gradient(135deg, rgb(15, 15, 20) 0, rgb(25, 25, 35) 50%, rgb(35, 25, 45) 100%);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-image: url('project://database/Assets/Sprites/Background/MenuBg.png?fileID=2800000&guid=38d53b9a017f1b544a0ec1fa68576b82&type=3#MenuBg');
+}
+
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    background-color: rgba(100, 150, 255, 0.3);
+}
+
+.bg-circle-1 {
+    width: 400px;
+    height: 400px;
+    top: -200px;
+    right: -200px;
+    background-color: rgba(100, 200, 255, 0.15);
+}
+
+.bg-circle-2 {
+    width: 600px;
+    height: 600px;
+    bottom: -300px;
+    left: -300px;
+    background-color: rgba(150, 100, 255, 0.1);
+}
+
+.bg-circle-3 {
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: -150px;
+    background-color: rgba(255, 150, 100, 0.08);
+}
+
+.content-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+}
+
+.header-section {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.title-main {
+    font-size: 72px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    letter-spacing: 8px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition-duration: 0.3s;
+    transition-property: opacity, translate;
+}
+
+.title-sub {
+    font-size: 52px;
+    color: rgb(180, 220, 255);
+    -unity-font-style: bold;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    opacity: 0.9;
+    transition-duration: 0.4s;
+    transition-property: opacity, translate;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: rgba(200, 200, 220, 0.8);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+}
+
+.menu-section {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.menu-button {
+    width: 320px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 35px;
+    border-width: 2px;
+    transition-duration: 0.3s;
+    transition-property: background-color, border-color, scale, translate;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.menu-button-primary {
+    background-color: rgba(100, 180, 255, 0.9);
+    border-color: rgb(120, 200, 255);
+    color: rgb(15, 15, 25);
+    text-shadow: none;
+}
+
+.menu-button-primary:hover {
+    background-color: rgb(120, 200, 255);
+    border-color: rgb(140, 220, 255);
+    scale: 1.05;
+    translate: 0 -2px;
+}
+
+.menu-button-primary:active {
+    scale: 0.98;
+    translate: 0 1px;
+}
+
+.menu-button-secondary {
+    background-color: rgba(50, 50, 70, 0.7);
+    border-color: rgba(100, 120, 150, 0.8);
+    color: rgb(220, 220, 240);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.menu-button-secondary:hover {
+    background-color: rgba(80, 80, 120, 0.9);
+    border-color: rgb(140, 160, 200);
+    color: rgb(255, 255, 255);
+    scale: 1.03;
+    translate: 0 -2px;
+}
+
+.menu-button-secondary:active {
+    scale: 0.98;
+    translate: 0 1px;
+}
+
+.menu-button-exit {
+    background-color: rgba(80, 40, 40, 0.7);
+    border-color: rgba(150, 80, 80, 0.8);
+    color: rgb(220, 180, 180);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.menu-button-exit:hover {
+    background-color: rgba(120, 60, 60, 0.9);
+    border-color: rgb(200, 120, 120);
+    color: rgb(255, 200, 200);
+    scale: 1.03;
+    translate: 0 -2px;
+}
+
+.menu-button-exit:active {
+    scale: 0.98;
+    translate: 0 1px;
+}
+
+.footer-info {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.version-label {
+    font-size: 14px;
+    color: rgba(150, 150, 170, 0.6);
+    letter-spacing: 1px;
+}
+
+.menu-button:focus {
+    border-color: rgb(150, 200, 255);
+    background-color: rgba(100, 120, 180, 0.3);
+}
+
+.title-main:hover {
+    opacity: 1;
+    color: rgb(200, 230, 255);
+}
+
+.title-sub:hover {
+    opacity: 1;
+    color: rgb(150, 200, 255);
+}

@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/ComputerUI/ComputerUI.uss?fileID=7433441132597879392&amp;guid=e3e3dc5b7de09c64caaf3fb8fa7dd27f&amp;type=3#ComputerUI" />
+    
+    <ui:VisualElement name="LicensesTab" class="tab-content">
+        <!-- Header -->
+        <ui:VisualElement name="Header" class="section-header">
+            <ui:Label text="Лицензии на товары" name="HeaderTitle" class="header-title" />
+            <ui:Label text="Покупайте лицензии для разблокировки новых товаров" name="HeaderSubtitle" class="header-subtitle" />
+        </ui:VisualElement>
+        
+        <!-- License Cards Container -->
+        <ui:ScrollView name="LicensesScrollView" class="licenses-scroll-view">
+            <ui:VisualElement name="LicensesContainer" class="licenses-container">
+                <!-- License cards will be generated dynamically -->
+            </ui:VisualElement>
+        </ui:ScrollView>
+        
+        <!-- License Card Template (hidden, used for cloning) -->
+        <ui:VisualElement name="LicenseCardTemplate" class="license-card" style="display: none;">
+            <ui:VisualElement name="CardHeader" class="license-card-header">
+                <ui:Label name="LicenseName" text="License Name" class="license-name" />
+                <ui:Label name="ProductCount" text="5 товаров" class="product-count" />
+            </ui:VisualElement>
+            
+            <ui:Label name="Description" text="License description" class="license-description" />
+            
+            <ui:VisualElement name="ProductsList" class="products-list">
+                <!-- Product items will be added here -->
+            </ui:VisualElement>
+            
+            <ui:VisualElement name="CardFooter" class="license-card-footer">
+                <ui:Label name="Price" text="$500" class="license-price" />
+                <ui:Button name="PurchaseButton" text="Купить" class="primary-button purchase-button" />
+                <ui:Label name="PurchasedLabel" text="Куплено" class="purchased-label" style="display: none;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML> 

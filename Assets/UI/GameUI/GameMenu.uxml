@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="GameMenu.uss" />
+    
+    <ui:VisualElement name="GameMenuOverlay" class="game-menu-overlay">
+        <!-- Контейнер с контентом -->
+        <ui:VisualElement name="content-container" class="content-container">
+            <ui:VisualElement name="GameMenu" class="game-menu">
+                <!-- Заголовок -->
+                <ui:VisualElement name="header-section" class="header-section">
+                    <ui:Label text="МЕНЮ ИГРЫ" name="game-menu-title" class="game-menu-title" />
+                    <ui:Label text="Выберите действие" class="subtitle" />
+                </ui:VisualElement>
+                
+                <!-- Кнопки меню -->
+                <ui:VisualElement name="menu-buttons" class="menu-buttons">
+                    <ui:Button text="Продолжить игру" name="ResumeButton" class="game-menu-button primary-button" />
+                    <ui:Button text="Быстрое сохранение" name="QuickSaveButton" class="game-menu-button secondary-button" />
+                    <ui:Button text="Сохранить игру" name="SaveGameButton" class="game-menu-button secondary-button" />
+                    <ui:Button text="Загрузить игру" name="LoadGameButton" class="game-menu-button secondary-button" />
+                    <ui:Button text="Выход в главное меню" name="ExitToMenuButton" class="game-menu-button danger-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML> 

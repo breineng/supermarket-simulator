@@ -1,0 +1,134 @@
+/* Современный дизайн меню паузы */
+
+/* === ОСНОВНОЙ КОНТЕЙНЕР === */
+.game-menu-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    display: none;
+}
+
+/* === КОНТЕНТ КОНТЕЙНЕР === */
+.content-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    padding: 40px;
+}
+
+/* === ОСНОВНОЕ МЕНЮ === */
+.game-menu {
+    background-color: rgba(25, 25, 35, 0.95);
+    border-radius: 25px;
+    padding: 40px 50px;
+    min-width: 450px;
+    max-width: 550px;
+    border-width: 1px;
+    border-color: rgba(80, 100, 140, 0.4);
+}
+
+/* === ЗАГОЛОВКИ === */
+.header-section {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.game-menu-title {
+    font-size: 42px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    -unity-text-align: middle-center;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: rgba(180, 180, 200, 0.8);
+    letter-spacing: 1.5px;
+    -unity-text-align: middle-center;
+}
+
+/* === КНОПКИ МЕНЮ === */
+.menu-buttons {
+    flex-direction: column;
+    width: 100%;
+}
+
+.game-menu-button {
+    height: 55px;
+    font-size: 16px;
+    -unity-font-style: bold;
+    letter-spacing: 0.8px;
+    border-radius: 15px;
+    border-width: 2px;
+    transition-duration: 0.3s;
+    transition-property: background-color, border-color, scale, translate;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 12px;
+}
+
+/* === СТИЛИ КНОПОК === */
+.primary-button {
+    background-color: rgba(80, 160, 255, 0.9);
+    border-color: rgb(100, 180, 255);
+    color: rgb(15, 15, 25);
+    text-shadow: none;
+}
+
+.primary-button:hover {
+    background-color: rgb(100, 180, 255);
+    border-color: rgb(120, 200, 255);
+    scale: 1.03;
+    translate: 0 -2px;
+}
+
+.secondary-button {
+    background-color: rgba(45, 55, 75, 0.9);
+    border-color: rgba(80, 100, 140, 0.8);
+    color: rgb(200, 200, 220);
+}
+
+.secondary-button:hover {
+    background-color: rgba(60, 75, 105, 0.95);
+    border-color: rgb(120, 150, 200);
+    color: rgb(240, 240, 255);
+    scale: 1.02;
+    translate: 0 -1px;
+}
+
+.danger-button {
+    background-color: rgba(200, 70, 70, 0.9);
+    border-color: rgba(220, 90, 90, 0.8);
+    color: rgb(255, 255, 255);
+}
+
+.danger-button:hover {
+    background-color: rgba(220, 90, 90, 0.95);
+    border-color: rgb(240, 120, 120);
+    scale: 1.02;
+    translate: 0 -1px;
+}
+
+/* === АНИМАЦИИ И ЭФФЕКТЫ === */
+.game-menu-button:active {
+    scale: 0.98;
+    translate: 0 1px;
+    transition-duration: 0.1s;
+} 

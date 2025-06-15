@@ -1,0 +1,36 @@
+/* General Styling for Cash Desk UI */
+
+.scanned-item-row {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(100, 110, 120, 0.5);
+}
+
+.item-name {
+    font-size: 16px;
+    color: rgb(210, 210, 210);
+}
+
+.item-price {
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: rgb(210, 210, 210);
+}
+
+#FinishButton {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+#FinishButton:hover {
+    background-color: #45a049;
+}
+
+#FinishButton:disabled {
+    background-color: #555;
+    color: #999;
+} 

@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss" />
+    
+    <!-- Основной контейнер с фоном -->
+    <ui:VisualElement name="main-container" class="main-container">
+        
+        <!-- Фоновые элементы для создания глубины -->
+        <ui:VisualElement name="background-layer" class="background-layer">
+            <ui:VisualElement name="bg-circle-1" class="bg-circle bg-circle-1" />
+            <ui:VisualElement name="bg-circle-2" class="bg-circle bg-circle-2" />
+            <ui:VisualElement name="bg-circle-3" class="bg-circle bg-circle-3" />
+        </ui:VisualElement>
+        
+        <!-- Центральный контент -->
+        <ui:VisualElement name="content-container" class="content-container">
+            
+            <!-- Заголовок с подзаголовком -->
+            <ui:VisualElement name="header-section" class="header-section">
+                <ui:Label text="СИМУЛЯТОР" name="title-main" class="title-main" />
+                <ui:Label text="СУПЕРМАРКЕТА" name="title-sub" class="title-sub" />
+                <ui:Label text="Управляйте своим магазином" name="subtitle" class="subtitle" />
+            </ui:VisualElement>
+            
+            <!-- Меню кнопок -->
+            <ui:VisualElement name="menu-section" class="menu-section">
+                <ui:Button name="ContinueButton" text="ПРОДОЛЖИТЬ" class="menu-button menu-button-primary" style="display: none;" />
+                
+                <ui:Button name="NewGameButton" text="НОВАЯ ИГРА" class="menu-button menu-button-secondary" />
+                
+                <ui:Button name="LoadGameButton" text="ЗАГРУЗИТЬ" class="menu-button menu-button-secondary" />
+                
+                <ui:Button name="ExitButton" text="ВЫХОД" class="menu-button menu-button-exit" />
+            </ui:VisualElement>
+            
+        </ui:VisualElement>
+        
+        <!-- Версия и копирайт в углу -->
+        <ui:VisualElement name="footer-info" class="footer-info">
+            <ui:Label text="v1.0.0" name="version-label" class="version-label" />
+        </ui:VisualElement>
+        
+    </ui:VisualElement>
+</ui:UXML> 
